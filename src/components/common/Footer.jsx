@@ -40,9 +40,7 @@ const Footer = () => {
             <div>
               <h4>Location</h4>
               <p>
-                Collectorate, Hajipur,
-                <br />
-                Vaishali - 844101, Bihar
+                Collectorate, Hajipur, Vaishali - 844101, Bihar
               </p>
             </div>
           </div>
