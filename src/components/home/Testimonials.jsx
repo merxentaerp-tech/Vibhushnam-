@@ -4,7 +4,7 @@ import "./Testimonials.css";
 import box1 from "../../assets/images/testimonials/Box.png.png";
 import box2 from "../../assets/images/testimonials/Box2.png.png";
 import box3 from "../../assets/images/testimonials/Box3.png.png";
-import box4 from "../../assets/images/testimonials/Box4.png.png";
+import box4 from "../../assets/images/testimonials/box4.png.png";
 
 import customer1 from "../../assets/images/testimonials/customer1.png.png";
 import customer2 from "../../assets/images/testimonials/customer2.png.png";

@@ -14,7 +14,7 @@ import ringsIcon from "../../assets/images/categories/ringsicon.png";
 import earringsIcon from "../../assets/images/categories/earringsicon.png";
 import necklaceIcon from "../../assets/images/categories/necklaceicon.png";
 import banglesIcon from "../../assets/images/categories/banglesicon.png";
-import othersIcon from "../../assets/images/categories/othersicon.png";
+import othersIcon from "../../assets/images/categories/othersIcon.png";
 
 import ArrowUpRight from "../../assets/images/categories/ArrowUpRight.png";
 
