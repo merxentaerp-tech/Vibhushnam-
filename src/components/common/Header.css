@@ -130,3 +130,59 @@
   font-size: 10px;
   line-height: 1;
 }
+@media (max-width: 768px) {
+  .site-header {
+    height: 68px;
+    padding: 0 8px;
+    gap: 8px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .logo-link {
+    flex: 0 0 auto;
+  }
+
+  .header-logo {
+    width: 128px;
+  }
+
+  .header-search {
+    width: 125px;
+    height: 31px;
+    margin-left: auto;
+    padding: 0 7px;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  .header-search img {
+    width: 11px;
+    height: 11px;
+  }
+
+  .header-search img:last-child {
+    transform: translateX(-2px);
+  }
+
+  .header-search input {
+    min-width: 0;
+    font-size: 8px;
+  }
+
+  .header-search input::placeholder {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-logo {
+    width: 115px;
+  }
+
+  .header-search {
+    width: 118px;
+  }
+}
