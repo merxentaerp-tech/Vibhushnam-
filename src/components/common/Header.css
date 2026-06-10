@@ -95,6 +95,9 @@
 
   box-sizing: border-box;
 }
+.header-search img:last-child {
+  transform: translateX(-4px);
+}
 
 .header-search img {
   width: 12px;
