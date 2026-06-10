@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap");
+
+.popular-jewellery {
+  width: 100%;
+  background: #ffffff;
+  padding: 65px 40px 90px;
+  position: relative;
+  text-align: center;
+}
+
+.popular-header {
+  margin-bottom: 55px;
+}
+
+.popular-header h2 {
+  
+    margin-top: 40px;
+  font-family: "Cinzel", serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+  justify-self: center;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.popular-header p {
+  margin-top: 12px;
+
+  font-size: 12px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.popular-products {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-card {
+  width: 240px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular-img-box {
+  width: 240px;
+  height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Product Images */
+
+.bracelet-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.ring-img {
+    
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+}
+
+.pendant-img {
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+}
+
+/* Product Text */
+
+.popular-info {
+  margin-top: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  white-space: nowrap;
+}
+
+.popular-info span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #111111;
+}
+
+.popular-info strong {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111111;
+}
+
+/* Navigation Arrows */
+
+.slider-btn {
+  position: absolute;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.slider-left {
+  left: 40px;
+}
+
+.slider-right {
+  right: 40px;
+}
+
+/* View All Button */
+
+.view-all-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+.view-all-btn {
+     width: 150px;
+    height: 50px;
+
+  background: #000000;
+  border: 1px solid #000000;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background: #111111;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .popular-header h2 {
+    font-size: 40px;
+  }
+
+  .popular-products {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-jewellery {
+    padding: 50px 20px;
+  }
+
+  .popular-header h2 {
+    font-size: 30px;
+  }
+
+  .popular-products {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .slider-btn {
+    display: none;
+  }
+
+  .view-all-btn {
+    width: 140px;
+    height: 48px;
+  }
+}

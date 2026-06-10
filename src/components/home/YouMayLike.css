@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@500;600&display=swap");
+
+.you-may-like-section {
+  width: 100%;
+  background: #ffffff;
+
+  /* Changed */
+  padding: 20px 0 180px;
+
+  overflow-x: hidden;
+}
+
+/* ======================
+   HEADING
+====================== */
+
+.you-may-like-heading {
+  width: fit-content;
+
+  margin: 18px auto -12px; /* niche lao */
+
+  font-family: "Cinzel", serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+
+  color: #000;
+  text-align: center;
+
+  position: relative;
+
+  left: -12px; /* Image1 aur Image3 ke beech better center */
+}
+
+/* ======================
+   GRID
+====================== */
+
+.you-may-like-grid {
+  width: 1220px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 340px);
+
+  column-gap: 67px;
+
+  row-gap: 70px;
+
+  align-items: start;
+  justify-content: center;
+}
+
+/* ======================
+   CARD
+====================== */
+
+.you-may-like-card {
+  width: 340px;
+  position: relative;
+}
+
+/* Row 1 Middle Card */
+.you-may-like-card:nth-child(2) {
+  transform: translateY(70px);
+}
+
+/* Row 2 Middle Card */
+.you-may-like-card:nth-child(5) {
+  transform: translateY(70px);
+}
+
+/* ======================
+   IMAGE
+====================== */
+
+.you-may-like-card img {
+  width: 340px;
+  height: 380px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 2px;
+}
+
+/* ======================
+   CATEGORY
+====================== */
+
+.product-category {
+  margin-top: 8px;
+  margin-bottom: 4px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 100%;
+
+  color: #c8c8c8;
+}
+
+/* ======================
+   PRODUCT NAME
+====================== */
+
+.product-name {
+  margin: 0;
+
+  width: 340px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  color: #000000;
+}
+
+/* ======================
+   TABLET
+====================== */
+
+@media (max-width: 1024px) {
+  .you-may-like-grid {
+    width: 100%;
+    padding: 0 24px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 28px;
+    row-gap: 50px;
+  }
+
+  .you-may-like-card,
+  .you-may-like-card img,
+  .product-name {
+    width: 100%;
+  }
+
+  .you-may-like-card img {
+    height: 360px;
+  }
+
+  .you-may-like-card:nth-child(2),
+  .you-may-like-card:nth-child(5) {
+    transform: none;
+  }
+
+  .you-may-like-heading {
+    transform: none;
+    font-size: 32px;
+  }
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media (max-width: 768px) {
+  .you-may-like-section {
+    padding: 40px 16px 80px;
+  }
+
+  .you-may-like-heading {
+    font-size: 28px;
+    margin-bottom: 30px;
+    transform: none;
+  }
+
+  .you-may-like-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0;
+  }
+
+  .you-may-like-card img {
+    height: 420px;
+  }
+}

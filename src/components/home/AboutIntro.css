@@ -1,0 +1,137 @@
+.about-intro {
+  width: 100%;
+  padding: 36px 36px 32px;
+  background: #ffffff;
+}
+
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr 270px;
+  align-items: start;
+  column-gap: 24px;
+  margin-bottom: 42px;
+}
+
+.about-top h2 {
+  margin: 0;
+  width: 100%;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 500;
+  color: #333333;
+}
+
+.about-top h2 span {
+  color: #b8b8b8;
+}
+
+.about-top img {
+  width: 270px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.about-list {
+  width: 100%;
+}
+
+.about-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  align-items: center;
+  min-height: 78px;
+  border-bottom: 1px solid #eeeeee;
+  width: 100%;
+}
+
+.about-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222222;
+  justify-self: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.about-description {
+  width: 100%;
+  max-width: 520px;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #222222;
+  justify-self: start;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .about-intro {
+    padding: 30px 24px;
+  }
+
+  .about-top {
+    grid-template-columns: 1fr 150px;
+    margin-bottom: 44px;
+  }
+
+  .about-top h2 {
+    font-size: 28px;
+  }
+
+  .about-top img {
+    width: 150px;
+    height: 95px;
+  }
+
+  .about-row {
+    grid-template-columns: 60px 260px 1fr;
+    column-gap: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-intro {
+    padding: 24px 18px 28px;
+  }
+
+  .about-top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+
+  .about-top h2 {
+    font-size: 22px;
+  }
+
+  .about-top img {
+    width: 145px;
+    height: 92px;
+  }
+
+  .about-row {
+    grid-template-columns: 44px 1fr;
+    gap: 10px;
+    padding: 16px 0;
+    min-height: auto;
+  }
+
+  .about-title {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .about-description {
+    grid-column: 2;
+    max-width: 100%;
+    font-size: 11px;
+  }
+}
