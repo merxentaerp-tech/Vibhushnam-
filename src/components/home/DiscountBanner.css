@@ -58,13 +58,13 @@
 }
 
 .discount-content button {
-  width: 222px;
-  height: 56px;
+  width: 280px;
+  height: 66px;
   background: #000;
   color: #fff;
   border: 1px solid #000;
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   cursor: pointer;
 }
 
