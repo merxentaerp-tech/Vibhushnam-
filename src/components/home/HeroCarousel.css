@@ -79,27 +79,55 @@
 
 @media (max-width: 768px) {
   .hero-carousel {
-    height: 300px;
-    min-height: 300px;
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+    max-height: 220px;
+    overflow: hidden;
+    background: #f7efe4;
+    margin-top: 8px;
+  }
+
+  .hero-slide {
+    width: 100%;
+    height: 220px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .hero-dots {
-    bottom: 15px;
+    bottom: 12px;
+    gap: 8px;
   }
 
   .hero-dots button {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
+  }
+
+  .hero-dots button.active {
+    transform: scale(1.25);
   }
 }
 
 @media (max-width: 480px) {
   .hero-carousel {
-    height: 240px;
-    min-height: 240px;
+    height: 190px;
+    min-height: 190px;
+    max-height: 190px;
+  }
+
+  .hero-slide {
+    height: 190px;
   }
 
   .hero-dots {
+    bottom: 10px;
     gap: 6px;
   }
 
