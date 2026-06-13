@@ -19,6 +19,7 @@
   line-height: 1.15;
   font-weight: 500;
   color: #333333;
+  font-family: montserrat, sans-serif;
 }
 
 .about-top h2 span {
@@ -51,6 +52,12 @@
   justify-content: center;
 }
 
+.about-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
 .about-title {
   font-size: 20px;
   font-weight: 700;
@@ -58,6 +65,7 @@
   justify-self: center;
   text-align: center;
   white-space: nowrap;
+  font-family: montserrat, sans-serif;
 }
 
 .about-description {
@@ -67,9 +75,10 @@
   line-height: 1.25;
   color: #222222;
   justify-self: start;
+  font-weight: 400;
+  font-family: montserrat, sans-serif;
 }
 
-/* Tablet */
 @media (max-width: 992px) {
   .about-intro {
     padding: 30px 24px;
@@ -95,8 +104,6 @@
   }
 }
 
-/* Mobile */
-/* Mobile */
 @media (max-width: 768px) {
   .about-intro {
     margin-top: 15px;
@@ -107,183 +114,111 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
   }
 
   .about-top h2 {
     font-size: 24px;
-    line-height: 1.2;
-    font-weight: 500;
-     color: #333333;
-     font-weight: 600;
-     font-family:montserrat, sans-serif;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #333333;
+    font-family: montserrat, sans-serif;
   }
 
   .about-top img {
     width: 100%;
     max-width: 362px;
-    height: 233x;
-    margin-right: 0;
-    object-fit: cover;
-  }
-
-  .about-row {
-    display: grid;
-    grid-template-columns: 52px 1fr;
-    column-gap: 14px;
-    row-gap: 8px;
-    align-items: center;
-    min-height: auto;
-    padding: 20px 0;
-    border-bottom: 1px solid #eeeeee;
-  }
-
-  .about-icon {
-    grid-row: 1 / span 2;
-    justify-content: center;
-    align-self: start;
-    padding-top: 2px;
-    margin-top: 2pxpx;
-  }
-
-  .about-icon img {
-    width: 38px;
-    height: 38px;
-  }
-
-  .about-title {
-    margin-top: 15px;
-    font-size: 18px;
-    line-height: 1.1;
-    justify-self: start;
-    text-align: left;
-    white-space: normal;
-    font-weight: 600;
-     color: #333333;
-      font-family:montserrat, sans-serif;
-  }
-
-  .about-description {
-    grid-column: 2;
-    max-width: 100%;
-    font-size: 14px;
-    line-height: 1.35;
-    justify-self: start;
-    font-weight: 400;
-     font-family:montserrat, sans-serif;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-intro {
-    padding: 24px 16px 30px;
-  }
-
-  .about-top {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-bottom: 28px;
-  }
-
-  .about-top h2 {
-    font-size: 24px;
-    line-height: 1.3;
-     font-family:montserrat, sans-serif;
-  }
-
-  .about-top img {
-    width: 100%;
-    max-width: 280px;
-    height: 160px;
+    height: 233px;
     object-fit: cover;
     border-radius: 12px;
-    margin: 0 auto;
-    display: block;
   }
 
   .about-row {
     display: grid;
-    grid-template-columns: 56px 1fr;
+    grid-template-columns: 64px 1fr;
     grid-template-rows: auto auto;
-
     align-items: start;
-
-    padding: 24px 0;
-
-    border-bottom: 1px solid #e8e8e8;
+    padding: 26px 0 27px;
+    min-height: auto;
+    border-bottom: 1px solid #dcdcdc;
   }
 
   .about-icon {
     grid-column: 1;
     grid-row: 1;
-    display: flex;
-    align-items: flex-start;
     justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0;
   }
 
   .about-icon img {
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
   }
 
   .about-title {
     grid-column: 2;
     grid-row: 1;
-
-    text-align: right;
     justify-self: end;
-
-    font-size: 18px;
-    font-weight: 600;
+    text-align: right;
+    font-size: 24px;
     line-height: 1.1;
-
-    color: #333;
-     font-family:montserrat, sans-serif;
+    font-weight: 600;
+    color: #333333;
+    white-space: normal;
+    font-family: montserrat, sans-serif;
   }
 
   .about-description {
     grid-column: 1 / 3;
     grid-row: 2;
-
-    margin-top: 14px;
-
+    margin-top: 22px;
     max-width: 100%;
-
-    font-size: 14px;
-    line-height: 1.35;
-
-    color: #444;
-     font-family:montserrat, sans-serif;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #444444;
+    font-family: montserrat, sans-serif;
   }
 }
 
 @media (max-width: 420px) {
   .about-intro {
-    padding: 22px 14px 28px;
+    padding: 22px 11px 28px;
   }
 
   .about-top h2 {
     font-size: 22px;
   }
 
+  .about-top img {
+    max-width: 100%;
+    height: 233px;
+  }
+
   .about-row {
-    grid-template-columns: 50px 1fr;
-    padding: 22px 0;
+    grid-template-columns: 62px 1fr;
+    padding: 26px 0 27px;
   }
 
   .about-icon img {
-    width: 45px;
-    height: 45px;
+    width: 34px;
+    height: 34px;
   }
 
   .about-title {
-    font-size: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: montserrat, sans-serif;
   }
 
   .about-description {
-    font-size: 11px;
-    line-height: 1.4;
+    margin-top: 22px;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #444444;
+    font-family: montserrat, sans-serif;
   }
 }
