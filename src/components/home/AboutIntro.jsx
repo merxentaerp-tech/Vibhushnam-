@@ -17,13 +17,13 @@ const aboutItems = [
     icon: weddingIcon,
     title: "Proposal & Wedding",
     description:
-      "From proposal rings to wedding-day elegance, our designs are crafted to celebrate love, commitment, and every moment in between.",
+      "From proposal rings to wedding-day elegance, our designs are crafted to celebrate love, commitment, and every moment in between",
   },
   {
     icon: giftingIcon,
     title: "Gifting",
     description:
-      "We create pieces that mark memories, milestones, and moments of love.",
+      "We create pieces that mark memories, milestones and moments of love",
   },
 ];
 
@@ -46,9 +46,13 @@ const AboutIntro = () => {
               <img src={item.icon} alt={item.title} />
             </div>
 
-            <div className="about-title">{item.title}</div>
+            <div className="about-title">
+              {item.title}
+            </div>
 
-            <div className="about-description">{item.description}</div>
+            <div className="about-description">
+              {item.description}
+            </div>
           </div>
         ))}
       </div>
