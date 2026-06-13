@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;500;600;700&display=swap");
 
 .popular-jewellery {
   width: 100%;
@@ -6,6 +6,7 @@
   padding: 65px 40px 90px;
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
 .popular-header {
@@ -13,55 +14,53 @@
 }
 
 .popular-header h2 {
-  
-    margin-top: 40px;
+  margin: 40px 0 0;
   font-family: "Cinzel", serif;
   font-size: 32px;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: 0;
-  justify-self: center;
   text-transform: uppercase;
   color: #111111;
 }
 
 .popular-header p {
-  margin-top: 12px;
-
+  margin: 12px auto 0;
+  max-width: 520px;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #666666;
+  line-height: 1.4;
 }
 
-.popular-products {
+.popular-slider {
   width: 100%;
   max-width: 1050px;
-
+  min-height: 255px;
   margin: 0 auto;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.popular-card {
-  width: 240px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.popular-img-box {
-  width: 240px;
-  height: 220px;
+  position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Product Images */
+.popular-card {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular-img-box {
+  width: 260px;
+  height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .bracelet-img {
   width: 180px;
@@ -70,7 +69,6 @@
 }
 
 .ring-img {
-    
   width: 220px;
   height: 220px;
   object-fit: contain;
@@ -82,8 +80,6 @@
   object-fit: contain;
 }
 
-/* Product Text */
-
 .popular-info {
   margin-top: 14px;
 
@@ -92,8 +88,9 @@
   justify-content: center;
 
   gap: 18px;
-
   white-space: nowrap;
+
+  font-family: "Montserrat", sans-serif;
 }
 
 .popular-info span {
@@ -108,13 +105,10 @@
   color: #111111;
 }
 
-/* Navigation Arrows */
-
 .slider-btn {
   position: absolute;
-
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
 
   border: none;
   background: transparent;
@@ -132,8 +126,8 @@
 }
 
 .slider-btn img {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
 }
 
@@ -145,8 +139,6 @@
   right: 40px;
 }
 
-/* View All Button */
-
 .view-all-wrapper {
   width: 100%;
 
@@ -157,23 +149,22 @@
 }
 
 .view-all-btn {
-     width: 150px;
-    height: 50px;
+  width: 150px;
+  height: 50px;
 
   background: #000000;
   border: 1px solid #000000;
-
   color: #ffffff;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 500;
 
   cursor: pointer;
-
   transition: 0.3s ease;
 }
 
@@ -181,38 +172,162 @@
   background: #111111;
 }
 
-/* Responsive */
-
 @media (max-width: 1200px) {
   .popular-header h2 {
-    font-size: 40px;
-  }
-
-  .popular-products {
-    gap: 40px;
+    font-size: 32px;
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .popular-jewellery {
-    padding: 50px 20px;
+    padding: 48px 20px 56px;
+    text-align: center;
+  }
+
+  .popular-header {
+    margin-bottom: 44px;
   }
 
   .popular-header h2 {
+    margin-top: 0;
     font-size: 30px;
+    line-height: 0.95;
+    text-align: center;
   }
 
-  .popular-products {
-    flex-direction: column;
-    gap: 40px;
+  .popular-header p {
+    margin: 14px auto 0;
+    max-width: 315px;
+    font-size: 12px;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .popular-slider {
+    max-width: 100%;
+    min-height: 285px;
+    position: relative;
+  }
+
+  .popular-card {
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  .popular-img-box {
+    width: 240px;
+    height: 220px;
+  }
+
+  .bracelet-img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .ring-img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .pendant-img {
+    width: 155px;
+    height: 155px;
+  }
+
+  .popular-info {
+    margin-top: 12px;
+    gap: 16px;
+  }
+
+  .popular-info span,
+  .popular-info strong {
+    font-size: 12px;
   }
 
   .slider-btn {
-    display: none;
+    width: 28px;
+    height: 28px;
+    top: 45%;
+  }
+
+  .slider-btn img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .slider-left {
+    left: 0;
+  }
+
+  .slider-right {
+    right: 0;
+  }
+
+  .view-all-wrapper {
+    margin-top: 28px;
   }
 
   .view-all-btn {
-    width: 140px;
-    height: 48px;
+    width: 150px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+/* Samsung M21 mainly yahi apply hoga */
+@media (max-width: 420px) {
+  .popular-jewellery {
+    padding: 44px 16px 54px;
+  }
+
+  .popular-header {
+    margin-bottom: 40px;
+  }
+
+  .popular-header h2 {
+    font-size: 28px;
+    line-height: 0.95;
+  }
+
+  .popular-header p {
+    max-width: 310px;
+    font-size: 12px;
+  }
+
+  .popular-slider {
+    min-height: 270px;
+  }
+
+  .popular-card {
+    width: 220px;
+  }
+
+  .popular-img-box {
+    width: 220px;
+    height: 205px;
+  }
+
+  .bracelet-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .ring-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .pendant-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .slider-left {
+    left: -2px;
+  }
+
+  .slider-right {
+    right: -2px;
   }
 }

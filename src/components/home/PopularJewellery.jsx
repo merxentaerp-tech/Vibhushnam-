@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./PopularJewellery.css";
 import { useNavigate } from "react-router-dom";
 
@@ -34,6 +35,17 @@ const products = [
 
 const PopularJewellery = () => {
   const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const activeProduct = products[activeIndex];
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? products.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev === products.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <section className="popular-jewellery">
@@ -46,38 +58,41 @@ const PopularJewellery = () => {
         </p>
       </div>
 
-      <button className="slider-btn slider-left">
-        <img src={leftArrow} alt="Previous" />
-      </button>
+      <div className="popular-slider">
+        <button
+          className="slider-btn slider-left"
+          onClick={handlePrev}
+          aria-label="Previous product"
+        >
+          <img src={leftArrow} alt="Previous" />
+        </button>
 
-      <button className="slider-btn slider-right">
-        <img src={rightArrow} alt="Next" />
-      </button>
-
-      <div className="popular-products">
-        {products.map((item) => (
-          <div className="popular-card" key={item.id}>
-            <div className="popular-img-box">
-              <img
-                src={item.image}
-                alt={item.name}
-                className={item.className}
-              />
-            </div>
-
-            <div className="popular-info">
-              <span>{item.name}</span>
-              <strong>{item.price}</strong>
-            </div>
+        <div className="popular-card">
+          <div className="popular-img-box">
+            <img
+              src={activeProduct.image}
+              alt={activeProduct.name}
+              className={activeProduct.className}
+            />
           </div>
-        ))}
+
+          <div className="popular-info">
+            <span>{activeProduct.name}</span>
+            <strong>{activeProduct.price}</strong>
+          </div>
+        </div>
+
+        <button
+          className="slider-btn slider-right"
+          onClick={handleNext}
+          aria-label="Next product"
+        >
+          <img src={rightArrow} alt="Next" />
+        </button>
       </div>
 
       <div className="view-all-wrapper">
-        <button
-          className="view-all-btn"
-          onClick={() => navigate("/products")}
-        >
+        <button className="view-all-btn" onClick={() => navigate("/products")}>
           View All
         </button>
       </div>
