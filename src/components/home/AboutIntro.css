@@ -205,11 +205,13 @@
   .about-icon img {
     width: 34px;
     height: 34px;
+    margin-left: 10px;
   }
 
   .about-title {
     font-size: 24px;
     font-weight: 600;
+    margin-right: 16px;
     font-family: montserrat, sans-serif;
   }
 
@@ -219,6 +221,7 @@
     line-height: 1.25;
     font-weight: 400;
     color: #444444;
+    margin-left: 10px;
     font-family: montserrat, sans-serif;
   }
 }
