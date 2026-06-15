@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;500;600;700&display=swap");
+
 .about-intro {
   width: 100%;
   padding: 36px 36px 32px;
@@ -141,7 +142,22 @@
     align-items: start;
     padding: 26px 0 27px;
     min-height: auto;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: none;
+    position: relative;
+  }
+
+  .about-row::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 25px;
+    bottom: 0;
+    height: 1px;
+    background: #dcdcdc;
+  }
+
+  .about-row:last-child::after {
+    display: none;
   }
 
   .about-icon {
@@ -207,6 +223,22 @@
   .about-row {
     grid-template-columns: 62px 1fr;
     padding: 26px 0 27px;
+    border-bottom: none;
+    position: relative;
+  }
+
+  .about-row::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 25px;
+    bottom: 0;
+    height: 1px;
+    background: #dcdcdc;
+  }
+
+  .about-row:last-child::after {
+    display: none;
   }
 
   .about-icon img {
