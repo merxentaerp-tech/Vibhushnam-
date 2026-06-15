@@ -51,19 +51,29 @@ const PopularJewellery = () => {
     <section className="popular-jewellery">
       <div className="popular-header">
         <h2>POPULAR JEWELLERY FOR YOU</h2>
-
         <p>
           Discover our most-loved pieces — timeless designs adored for every
           occasion
         </p>
       </div>
 
-      <div className="popular-slider">
-        <button
-          className="slider-btn slider-left"
-          onClick={handlePrev}
-          aria-label="Previous product"
-        >
+      <div className="popular-products">
+        {products.map((item) => (
+          <div className="popular-card" key={item.id}>
+            <div className="popular-img-box">
+              <img src={item.image} alt={item.name} className={item.className} />
+            </div>
+
+            <div className="popular-info">
+              <span>{item.name}</span>
+              <strong>{item.price}</strong>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="popular-mobile-slider">
+        <button className="slider-btn slider-left" onClick={handlePrev}>
           <img src={leftArrow} alt="Previous" />
         </button>
 
@@ -82,11 +92,7 @@ const PopularJewellery = () => {
           </div>
         </div>
 
-        <button
-          className="slider-btn slider-right"
-          onClick={handleNext}
-          aria-label="Next product"
-        >
+        <button className="slider-btn slider-right" onClick={handleNext}>
           <img src={rightArrow} alt="Next" />
         </button>
       </div>

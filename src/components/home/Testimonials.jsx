@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Testimonials.css";
 
 import box1 from "../../assets/images/testimonials/Box.png.png";
 import box2 from "../../assets/images/testimonials/Box2.png.png";
 import box3 from "../../assets/images/testimonials/Box3.png.png";
 import box4 from "../../assets/images/testimonials/box4.png.png";
+import mobileBox from "../../assets/images/testimonials/Mobile-View Box.png.png";
 
 import customer1 from "../../assets/images/testimonials/customer1.png.png";
 import customer2 from "../../assets/images/testimonials/customer2.png.png";
@@ -47,6 +48,18 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % testimonials.length);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const activeItem = testimonials[activeIndex];
+
   return (
     <section className="testimonials-section">
       <div className="testimonials-title">
@@ -54,7 +67,7 @@ const Testimonials = () => {
         <h2>OUR LOYAL CUSTOMERS</h2>
       </div>
 
-      <div className="testimonials-slider">
+      <div className="testimonials-slider desktop-testimonials">
         {testimonials.map((item) => (
           <div className={`testimonial-card ${item.className}`} key={item.id}>
             <img className="card-box" src={item.box} alt="" />
@@ -67,6 +80,36 @@ const Testimonials = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mobile-testimonials">
+        <div className="mobile-testimonial-card">
+          <img className="mobile-card-box" src={mobileBox} alt="" />
+
+          <img
+            className="mobile-customer-img"
+            src={activeItem.image}
+            alt={activeItem.name}
+          />
+
+          <div className="mobile-review-content">
+            <h4>{activeItem.name}</h4>
+            <p>"{activeItem.text}"</p>
+          </div>
+        </div>
+
+        <div className="testimonial-dots">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              className={`testimonial-dot ${
+                index === activeIndex ? "active" : ""
+              }`}
+              onClick={() => setActiveIndex(index)}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

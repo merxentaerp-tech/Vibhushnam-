@@ -16,6 +16,12 @@ const DiscountBanner = () => {
       const banner = bannerRef.current;
       if (!wrap || !banner) return;
 
+      if (window.innerWidth <= 600) {
+        banner.style.transform = "none";
+        wrap.style.height = "auto";
+        return;
+      }
+
       const scale = wrap.offsetWidth / 1728;
       banner.style.transform = `scale(${scale})`;
       wrap.style.height = `${701 * scale}px`;
