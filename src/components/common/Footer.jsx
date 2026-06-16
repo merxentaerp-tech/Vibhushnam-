@@ -39,9 +39,7 @@ const Footer = () => {
             <MapPin />
             <div>
               <h4>Location</h4>
-              <p>
-                Collectorate, Hajipur, Vaishali - 844101, Bihar
-              </p>
+              <p>Collectorate, Hajipur, Vaishali - 844101, Bihar</p>
             </div>
           </div>
         </div>
@@ -49,13 +47,14 @@ const Footer = () => {
         <div className="footer-main">
           <div className="footer-about">
             <p>
-              Eloura is a luxury jewellery house inspired by timeless elegance.
-              We craft high-quality pieces using the finest materials —designed
-              to celebrate beauty, confidence, and individuality.
+              Vibhushanam is a luxury jewellery house inspired by timeless
+              elegance. We craft high-quality pieces using<br />
+              the finest materials—designed to celebrate beauty, confidence,
+              and individuality.
             </p>
           </div>
 
-          <div className="footer-col">
+          <div className="footer-col footer-bestsellers">
             <h3>BESTSELLERS</h3>
             <a href="#">Gold Bracelets</a>
             <a href="#">Stone Gold Ring</a>
@@ -65,7 +64,7 @@ const Footer = () => {
             <a href="#">Terms & Conditions</a>
           </div>
 
-          <div className="footer-col">
+          <div className="footer-col footer-quicklinks">
             <h3>QUICK LINKS</h3>
             <a href="#">Contact Us</a>
             <a href="#">Privacy Policy</a>
