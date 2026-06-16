@@ -172,9 +172,10 @@
     left: 0;
     transform: none;
 
-    font-size: clamp(20px, 7vw, 24px);
+    font-size: clamp(20px, 7vw, 22px);
     line-height: 1.05;
     text-align: center;
+    font-weight: 700;
   }
 
   .you-may-like-grid {
