@@ -16,7 +16,7 @@
 
 .popular-header h2 {
   margin-top: 40px;
-  font-family: "Cinzel", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 100%;
@@ -106,8 +106,8 @@
 
 .slider-btn {
   position: absolute;
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   border: none;
   background: transparent;
   padding: 0;
@@ -121,17 +121,17 @@
 }
 
 .slider-btn img {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 
 .slider-left {
-  left: 40px;
+  left: -80px;
 }
 
 .slider-right {
-  right: 40px;
+  right: -80px;
 }
 
 .view-all-wrapper {
@@ -142,8 +142,8 @@
 }
 
 .view-all-btn {
-  width: 150px;
-  height: 50px;
+  width: 220px;
+  height: 70px;
   background: #000000;
   border: 1px solid #000000;
   color: #ffffff;
@@ -151,7 +151,7 @@
   align-items: center;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s ease;

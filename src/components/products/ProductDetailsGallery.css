@@ -54,15 +54,20 @@
 .store-check-box {
   width: 900px;
   max-width: calc(100% - 40px);
-  height: 48px;
+  min-height: 48px;
   margin: 38px auto 0;
   border: 1px solid #111;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 0 22px;
   background: #fff;
   box-sizing: border-box;
+  position: relative;
+}
+
+.store-check-box.active {
+  min-height: 96px;
 }
 
 .store-left,
@@ -70,14 +75,23 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  height: 48px;
 }
 
 .store-left img,
 .store-right img {
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
+}
+.store-right {
+  cursor: pointer;
+}
+
+.store-check-box.active .store-right img {
+  transform: rotate(180deg);
 }
 
 .store-left span {
@@ -90,6 +104,43 @@
   font-size: 14px;
   color: #111;
   font-weight: 400;
+}
+
+.availability-detail {
+  position: absolute;
+  left: 50%;
+  top: 48px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  gap: 110px;
+}
+
+.availability-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.availability-location img {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  margin-top: 2px;
+}
+
+.availability-location p,
+.availability-contact p,
+.availability-contact span {
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.3;
+  color: #111;
+  font-weight: 400;
+}
+
+.availability-contact span {
+  color: #777;
 }
 
 @media (max-width: 1120px) {
@@ -158,25 +209,72 @@
   .store-check-box {
     width: 100%;
     max-width: 100%;
-    height: 56px;
+    min-height: 56px;
     margin: 18px auto 0;
     padding: 0 14px;
     border: 2px solid #111;
   }
 
+  .store-check-box.active {
+    min-height: 110px;
+  }
+
   .store-left,
   .store-right {
     gap: 6px;
+    height: 56px;
   }
 
-  .store-left img,
-  .store-right img {
+  .store-left img {
     display: none;
+  }
+
+  .store-right img {
+    display: block;
+    width: 12px;
+    height: 12px;
   }
 
   .store-left span,
   .store-right span {
     font-size: 16px;
+    line-height: 1;
+  }
+
+  .availability-detail {
+    top: 56px;
+    gap: 28px;
+  }
+
+  .availability-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    flex: 1;
+  }
+
+  .availability-location p {
+    margin: 0;
+    font-size: 9px;
+    line-height: 1.3;
+  }
+
+  .availability-contact {
+    min-width: 85px;
+    flex-shrink: 0;
+  }
+
+  .availability-contact span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  .availability-contact p {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 10px;
     line-height: 1;
   }
 }

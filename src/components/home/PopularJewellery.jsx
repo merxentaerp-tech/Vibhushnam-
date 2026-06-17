@@ -40,11 +40,15 @@ const PopularJewellery = () => {
   const activeProduct = products[activeIndex];
 
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? products.length - 1 : prev - 1));
+    setActiveIndex((prev) =>
+      prev === 0 ? products.length - 1 : prev - 1
+    );
   };
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev === products.length - 1 ? 0 : prev + 1));
+    setActiveIndex((prev) =>
+      prev === products.length - 1 ? 0 : prev + 1
+    );
   };
 
   return (
@@ -57,11 +61,20 @@ const PopularJewellery = () => {
         </p>
       </div>
 
+      {/* WEB VIEW */}
       <div className="popular-products">
+        <button className="slider-btn slider-left" onClick={handlePrev}>
+          <img src={leftArrow} alt="Previous" />
+        </button>
+
         {products.map((item) => (
           <div className="popular-card" key={item.id}>
             <div className="popular-img-box">
-              <img src={item.image} alt={item.name} className={item.className} />
+              <img
+                src={item.image}
+                alt={item.name}
+                className={item.className}
+              />
             </div>
 
             <div className="popular-info">
@@ -70,8 +83,13 @@ const PopularJewellery = () => {
             </div>
           </div>
         ))}
+
+        <button className="slider-btn slider-right" onClick={handleNext}>
+          <img src={rightArrow} alt="Next" />
+        </button>
       </div>
 
+      {/* MOBILE VIEW */}
       <div className="popular-mobile-slider">
         <button className="slider-btn slider-left" onClick={handlePrev}>
           <img src={leftArrow} alt="Previous" />
@@ -98,7 +116,10 @@ const PopularJewellery = () => {
       </div>
 
       <div className="view-all-wrapper">
-        <button className="view-all-btn" onClick={() => navigate("/products")}>
+        <button
+          className="view-all-btn"
+          onClick={() => navigate("/products")}
+        >
           View All
         </button>
       </div>
