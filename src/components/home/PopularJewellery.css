@@ -189,7 +189,7 @@
 
   .popular-header h2 {
     margin-top: 0;
-    font-size: clamp(18px, 6vw, 30px);
+    font-size:22px;
     line-height: 1.15;
     text-align: center;
     white-space: normal;
@@ -253,9 +253,8 @@
     gap: 16px;
   }
 
-  .popular-mobile-slider .popular-info span,
-  .popular-mobile-slider .popular-info strong {
-    font-size: 12px;
+  .popular-mobile-slider .popular-info span {
+    font-size: 16px;
   }
 
   .slider-btn {
@@ -297,19 +296,19 @@
 
   .popular-header p {
     max-width: 280px;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.4;
   }
 }
 
 @media (max-width: 375px) {
   .popular-header h2 {
-    font-size: 17px;
+    font-size: 22px;
   }
 
   .popular-header p {
     max-width: 250px;
-    font-size: 11px;
+    font-size: 16px;
   }
 }
 
@@ -320,7 +319,7 @@
 
   .popular-header p {
     max-width: 245px;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .popular-mobile-slider {
@@ -349,7 +348,7 @@
 
   .popular-header p {
     max-width: 220px;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .popular-mobile-slider .popular-card {

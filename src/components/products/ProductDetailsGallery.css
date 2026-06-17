@@ -15,8 +15,12 @@
   text-transform: uppercase;
 }
 
+.mobile-back-arrow {
+  display: none;
+}
+
 .product-details-gallery {
-  width: 900px; /* 1080 se kam */
+  width: 900px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 450px);
@@ -25,7 +29,7 @@
 
 .gallery-img-box {
   width: 450px;
-  height: 300px; /* 380 se kam */
+  height: 300px;
   overflow: hidden;
 }
 
@@ -35,13 +39,11 @@
   object-fit: cover;
 }
 
-/* Zoom hata do */
 .left-img img,
 .right-img img {
   transform: none;
   object-position: center center;
 }
-
 
 .right-img img {
   transform: scale(1.03);
@@ -108,30 +110,73 @@
 
 @media (max-width: 768px) {
   .product-details-section {
-    padding: 32px 0 20px;
+    padding: 8px 17px 42px;
   }
 
   .product-details-title {
-    font-size: 24px;
-    margin-bottom: 30px;
+    width: auto;
+    max-width: none;
+    white-space: nowrap;
+    font-size: 18px;
+    line-height: 1;
+    padding-right: 30px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .mobile-back-arrow {
+    display: block;
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    cursor: pointer;
+    flex-shrink: 0;
   }
 
   .product-details-gallery {
-    grid-template-columns: 1fr;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
   }
 
   .gallery-img-box {
-    height: auto;
+    width: 100%;
+    height: 198px;
   }
 
   .gallery-img-box img {
-    height: auto;
-    transform: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none !important;
   }
 
   .store-check-box {
-    height: 46px;
-    margin-top: 28px;
+    width: 100%;
+    max-width: 100%;
+    height: 56px;
+    margin: 18px auto 0;
     padding: 0 14px;
+    border: 2px solid #111;
+  }
+
+  .store-left,
+  .store-right {
+    gap: 6px;
+  }
+
+  .store-left img,
+  .store-right img {
+    display: none;
+  }
+
+  .store-left span,
+  .store-right span {
+    font-size: 16px;
+    line-height: 1;
   }
 }

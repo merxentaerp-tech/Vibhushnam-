@@ -2,6 +2,7 @@ import "./ProductGrid.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { products } from "../../data/products";
 import viewProductIcon from "../../assets/icons/view-product.png.png";
+import viewProductMobIcon from "../../assets/icons/viewProductMob.png.png";
 
 const headingMap = {
   ring: "RINGS",
@@ -59,22 +60,22 @@ const ProductGrid = () => {
       <div className="products-grid">
         {filteredProducts.map((item) => (
           <div className="product-card" key={item.id}>
-            <img
-              className="product-img"
-              src={item.image}
-              alt={item.title}
-            />
+            <img className="product-img" src={item.image} alt={item.title} />
 
             <h3>{item.title}</h3>
 
             <p>{item.desc}</p>
 
-            <button
-              className="view-product-btn"
-              onClick={handleViewProduct}
-            >
+            <button className="view-product-btn" onClick={handleViewProduct}>
               <img
+                className="view-product-desktop"
                 src={viewProductIcon}
+                alt="View Product"
+              />
+
+              <img
+                className="view-product-mobile"
+                src={viewProductMobIcon}
                 alt="View Product"
               />
             </button>

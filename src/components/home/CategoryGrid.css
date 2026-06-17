@@ -150,7 +150,7 @@
   .category-heading p {
     max-width: 310px;
     margin: 10px auto 0;
-    font-size: clamp(13px, 4vw, 15px);
+    font-size: clamp(16px, 4vw, 16px);
     line-height: 1.15;
   }
 
@@ -197,11 +197,11 @@
 
   .category-heading p {
     max-width: 285px;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .category-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .category-arrow {

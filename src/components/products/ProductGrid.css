@@ -32,28 +32,21 @@
 .products-filters select {
   width: 100px;
   height: 34px;
-
   padding-left: 16px;
-  padding-right: 30px; /* arrow ko andar lane ke liye */
-
+  padding-right: 30px;
   border: 1px solid #bdbdbd;
   border-radius: 22px;
   background: #fff;
-
   font-size: 13px;
   color: #000;
-
   outline: none;
   cursor: pointer;
-
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-
   background-repeat: no-repeat;
-  background-position: right 12px center; /* yaha arrow andar aayega */
+  background-position: right 12px center;
   background-size: 12px;
 }
 
@@ -110,6 +103,10 @@
   transition: all 0.3s ease;
 }
 
+.view-product-mobile {
+  display: none !important;
+}
+
 .view-product-btn:hover {
   transform: translateY(-3px);
 }
@@ -148,8 +145,97 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
+  .products-page {
+    padding: 22px 12px 30px;
+  }
+
+  .products-title {
+    margin: 0 0 18px;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .products-filter-row {
+    margin-bottom: 18px;
+  }
+
+  .products-filters {
+    gap: 8px;
+  }
+
+  .products-filters select {
+    width: 62px;
+    height: 24px;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-size: 8px;
+    border-radius: 14px;
+    background-position: right 8px center;
+    background-size: 8px;
+  }
+
   .products-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 12px;
+  }
+
+  .product-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .product-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 177 / 198;
+    object-fit: cover;
+    display: block;
+  }
+
+  .product-card h3 {
+    margin: 7px 0 3px;
+    font-size: clamp(8px, 2.4vw, 11px);
+    line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .product-card p {
+    margin: 0 0 7px;
+    font-size: clamp(6px, 2vw, 9px);
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .view-product-btn {
+    width: 100%;
+    height: clamp(28px, 9vw, 40px);
+    border: 0;
+  }
+
+  .view-product-desktop {
+    display: none !important;
+  }
+
+  .view-product-mobile {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 360px) {
+  .products-page {
+    padding: 20px 8px 25px;
+  }
+
+  .products-grid {
+    gap: 18px 8px;
   }
 }

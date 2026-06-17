@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="footer-about">
             <p>
               Vibhushanam is a luxury jewellery house inspired by timeless
-              elegance. We craft high-quality pieces using<br />
+              elegance. We craft high-quality pieces using
               the finest materials—designed to celebrate beauty, confidence,
               and individuality.
             </p>

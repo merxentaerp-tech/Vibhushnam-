@@ -110,6 +110,7 @@
   .about-intro {
     margin-top: 15px;
     padding: 24px 20px 32px;
+    overflow: hidden;
   }
 
   .about-top {
@@ -121,23 +122,28 @@
 
   .about-top h2 {
     font-size: 24px;
-    line-height: 1.25;
-    font-weight: 600;
+    line-height: 1;
+    font-weight: 500;
     color: #333333;
     font-family: montserrat, sans-serif;
+    width: 100%;
+    max-width: 362px;
+    height: auto;
   }
 
   .about-top img {
+    margin-top: 16px;
     width: 100%;
     max-width: 362px;
-    height: 233px;
+    height: auto;
+    aspect-ratio: 362 / 233;
     object-fit: cover;
     border-radius: 12px;
   }
 
   .about-row {
     display: grid;
-    grid-template-columns: 64px 1fr;
+    grid-template-columns: 62px minmax(0, 1fr);
     grid-template-rows: auto auto;
     align-items: start;
     padding: 26px 0 27px;
@@ -169,8 +175,9 @@
   }
 
   .about-icon img {
-    width: 45px;
-    height: 45px;
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
     object-fit: contain;
   }
 
@@ -184,6 +191,7 @@
     font-weight: 600;
     color: #333333;
     white-space: normal;
+    margin-right: 16px;
     font-family: montserrat, sans-serif;
   }
 
@@ -191,11 +199,12 @@
     grid-column: 1 / 3;
     grid-row: 2;
     margin-top: 22px;
-    max-width: 100%;
-    font-size: 18px;
+    max-width: calc(100% - 40px);
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 400;
     color: #444444;
+    margin-left: 20px;
     font-family: montserrat, sans-serif;
   }
 }
@@ -203,64 +212,5 @@
 @media (max-width: 420px) {
   .about-intro {
     padding: 22px 11px 28px;
-  }
-
-  .about-top h2 {
-    font-size: 24px;
-    font-weight: 500;
-    font-family: montserrat, sans-serif;
-    line-height: 100%;
-    width: 362px;
-    height: 133px;
-  }
-
-  .about-top img {
-    margin-top: 6px;
-    max-width: 100%;
-    height: 233px;
-  }
-
-  .about-row {
-    grid-template-columns: 62px 1fr;
-    padding: 26px 0 27px;
-    border-bottom: none;
-    position: relative;
-  }
-
-  .about-row::after {
-    content: "";
-    position: absolute;
-    left: 10px;
-    right: 25px;
-    bottom: 0;
-    height: 1px;
-    background: #dcdcdc;
-  }
-
-  .about-row:last-child::after {
-    display: none;
-  }
-
-  .about-icon img {
-    width: 34px;
-    height: 34px;
-    margin-left: 10px;
-  }
-
-  .about-title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-right: 16px;
-    font-family: montserrat, sans-serif;
-  }
-
-  .about-description {
-    margin-top: 22px;
-    font-size: 16px;
-    line-height: 1.25;
-    font-weight: 400;
-    color: #444444;
-    margin-left: 10px;
-    font-family: montserrat, sans-serif;
   }
 }
