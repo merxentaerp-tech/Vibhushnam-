@@ -140,7 +140,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .view-all-btn {
@@ -157,6 +157,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s ease;
+  
 }
 
 .view-all-btn:hover {
