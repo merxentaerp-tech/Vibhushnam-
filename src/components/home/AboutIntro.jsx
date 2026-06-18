@@ -33,7 +33,7 @@ const AboutIntro = () => {
       <div className="about-top">
         <h2>
           We’re a passionate team crafting unique jewellery inspired by
-          <span> family, delivering quality pieces just for you</span>
+          <span> family, delivering quality pieces just<br></br>for you</span>
         </h2>
 
         <img src={topImage} alt="Jewellery" />

@@ -17,7 +17,7 @@
 .about-top h2 {
   margin: 0;
   width: 100%;
-  font-size: 42px;
+  font-size: 34px;
   line-height: 1.15;
   font-weight: 500;
   color: #333333;
@@ -52,33 +52,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: -70px;
 }
 
 .about-icon img {
-  width: 38px;
+  width: 48px;
   height: 38px;
   object-fit: contain;
 }
 
 .about-title {
   font-size: 20px;
-  font-weight: 700;
-  color: #222222;
+  font-weight: 500;
   justify-self: center;
   text-align: center;
   white-space: nowrap;
   font-family: montserrat, sans-serif;
+  margin-left: -90px;
 }
 
 .about-description {
   width: 100%;
   max-width: 520px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.25;
   color: #222222;
   justify-self: start;
   font-weight: 400;
   font-family: montserrat, sans-serif;
+  margin-left: 74px;
 }
 
 @media (max-width: 992px) {
@@ -125,7 +127,7 @@
     line-height: 1;
     font-weight: 500;
     color: #333333;
-    font-family: montserrat, sans-serif;
+    font-family: cinzel, sans-serif;
     width: 100%;
     max-width: 362px;
     height: auto;
