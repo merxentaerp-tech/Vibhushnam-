@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./ProductGrid.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { products } from "../../data/products";
@@ -14,15 +15,25 @@ const ProductGrid = () => {
   const { category } = useParams();
   const navigate = useNavigate();
 
+  const [gender, setGender] = useState("Gender");
+  const [metal, setMetal] = useState("Metal");
+
   const pageTitle = category
     ? headingMap[category] || "JEWELLERY"
     : "ALL JEWELLERY";
 
-  const filteredProducts = category
+  const categoryProducts = category
     ? products.filter((item) =>
         item.title.toLowerCase().includes(category.toLowerCase())
       )
     : products;
+
+  const filteredProducts = categoryProducts.filter((item) => {
+    const genderMatch = gender === "Gender" || item.gender === gender;
+    const metalMatch = metal === "Metal" || item.metal === metal;
+
+    return genderMatch && metalMatch;
+  });
 
   const handleViewProduct = () => {
     navigate("/product-details");
@@ -42,13 +53,13 @@ const ProductGrid = () => {
 
       <div className="products-filter-row">
         <div className="products-filters">
-          <select>
+          <select value={gender} onChange={(e) => setGender(e.target.value)}>
             <option>Gender</option>
             <option>Men</option>
             <option>Women</option>
           </select>
 
-          <select>
+          <select value={metal} onChange={(e) => setMetal(e.target.value)}>
             <option>Metal</option>
             <option>Gold</option>
             <option>Silver</option>

@@ -49,4 +49,6 @@ export const products = productsData.map((title, index) => ({
   image: images[index % images.length],
   title,
   desc: "Elegant blooming gold jewellery with delicate floral charm.",
+  gender: index < 10 ? "Men" : "Women",
+  metal: index % 2 === 0 ? "Gold" : "Silver",
 }));
