@@ -11,6 +11,7 @@ import findStoreIcon from "../../assets/icons/FindStoreicon.png.png";
 import checkIcon from "../../assets/icons/Check-Availabilityicon.png.png";
 import arrowMobile from "../../assets/icons/arrowMobile.png.png";
 import vectorIcon from "../../assets/icons/Vector.png";
+import callIcon from "../../assets/icons/CallUs.png.png";
 
 const ProductDetailsGallery = () => {
   const navigate = useNavigate();
@@ -72,8 +73,14 @@ const ProductDetailsGallery = () => {
             </div>
 
             <div className="availability-contact">
-              <span>Store Contact No.</span>
-              <p>+91 9999-888888</p>
+              <span>
+                <img src={callIcon} alt="Call" />
+                Store Contact No.
+              </span>
+
+              <div className="contact-number-row">
+                <p>+91 9999-888888</p>
+              </div>
             </div>
           </div>
         )}
