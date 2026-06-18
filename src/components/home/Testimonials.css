@@ -16,20 +16,20 @@
 
 .testimonials-title span {
   display: block;
-  font-size: 10px;
+  font-size: 15px;
   color: #111;
   margin-bottom: 7px;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
 .testimonials-title h2 {
-  margin: 0;
+  margin-top: 10px;
   font-size: 32px;
   line-height: 1;
   color: #111;
   font-weight: 700;
-  font-family: "Montserrat", serif;
+  font-family: "Cinzel", serif;
 }
 .testimonials-slider {
   position: absolute;
@@ -99,7 +99,7 @@
   line-height: 1.15;
   color: #111;
   font-weight: 700;
-  font-family: "Times New Roman", serif;
+  font-family: "Montserrat", "Times New Roman", serif;
 }
 
 .review-content p {
@@ -109,7 +109,7 @@
   line-height: 1.35;
   color: #555;
   font-weight: 500;
-  font-family: "Times New Roman", serif;
+  font-family: "Montserrat", "Times New Roman", serif;
 }
 
 .mobile-testimonials {
@@ -199,7 +199,7 @@
     line-height: 1;
     color: #111;
     font-weight: 700;
-    font-family: "Times New Roman", serif;
+    font-family: "Cinzel", "Times New Roman", serif;
   }
 
   .mobile-review-content p {
@@ -209,7 +209,7 @@
     line-height: 1.25;
     color: #8a8a8a;
     font-weight: 500;
-    font-family: "Times New Roman", serif;
+    font-family: "Cinzel", "Times New Roman", serif;
   }
 
   .testimonial-dots {

@@ -1,7 +1,6 @@
 import "./ProductGrid.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { products } from "../../data/products";
-import viewProductIcon from "../../assets/icons/view-product.png.png";
 import viewProductMobIcon from "../../assets/icons/viewProductMob.png.png";
 
 const headingMap = {
@@ -67,11 +66,7 @@ const ProductGrid = () => {
             <p>{item.desc}</p>
 
             <button className="view-product-btn" onClick={handleViewProduct}>
-              <img
-                className="view-product-desktop"
-                src={viewProductIcon}
-                alt="View Product"
-              />
+              <span className="view-product-text">View Product</span>
 
               <img
                 className="view-product-mobile"

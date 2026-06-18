@@ -7,16 +7,16 @@
 .products-title {
   text-align: center;
   margin: 0 0 42px;
-  font-family: "Times New Roman", serif;
-  font-size: 34px;
+  font-family: "cinzel", serif;
+  font-size: 32px;
   line-height: 1;
-  font-weight: 700;
-  color: #000;
+  font-weight: 400;
+
 }
 
-.products-title span {
+/* .products-title span {
   font-weight: 400;
-}
+} */
 
 .products-filter-row {
   width: 100%;
@@ -30,8 +30,8 @@
 }
 
 .products-filters select {
-  width: 100px;
-  height: 34px;
+  width: 130px;
+  height: 40px;
   padding-left: 16px;
   padding-right: 30px;
   border: 1px solid #bdbdbd;
@@ -71,7 +71,7 @@
 .product-card h3 {
   margin: 13px 0 4px;
   font-family: "Times New Roman", serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   font-weight: 700;
   color: #000;
@@ -80,27 +80,32 @@
 
 .product-card p {
   margin: 0 0 13px;
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.5;
   color: #555;
 }
 
 .view-product-btn {
   width: 440px;
   height: 56px;
-  border: 0;
+  border: 1px solid #000;
   padding: 0;
-  background: transparent;
+  background: #fff;
+  color: #000;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.view-product-btn img {
-  width: 440px;
-  height: 56px;
-  display: block;
-  object-fit: contain;
-  transition: all 0.3s ease;
+.view-product-text {
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  color: inherit;
+  text-transform: uppercase;
 }
 
 .view-product-mobile {
@@ -109,11 +114,8 @@
 
 .view-product-btn:hover {
   transform: translateY(-3px);
-}
-
-.view-product-btn:hover img {
-  filter: brightness(0.95);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  background: #000;
+  color: #fff;
 }
 
 @media (max-width: 1440px) {
@@ -216,6 +218,11 @@
     width: 100%;
     height: clamp(28px, 9vw, 40px);
     border: 0;
+    background: transparent;
+  }
+
+  .view-product-text {
+    display: none;
   }
 
   .view-product-desktop {

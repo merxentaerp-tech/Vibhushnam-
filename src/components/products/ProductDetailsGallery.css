@@ -7,7 +7,7 @@
 .product-details-title {
   margin: 0 0 42px;
   text-align: center;
-  font-family: "Times New Roman", serif;
+  font-family: "cinzel", serif;
   font-size: 32px;
   line-height: 1;
   font-weight: 700;
@@ -29,7 +29,7 @@
 
 .gallery-img-box {
   width: 450px;
-  height: 300px;
+  height: 320px;
   overflow: hidden;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .store-check-box.active {
-  min-height: 96px;
+  min-height: 180px;
 }
 
 .store-left,
@@ -101,7 +101,7 @@
 }
 
 .store-right span {
-  font-size: 14px;
+  font-size: 17px;
   color: #111;
   font-weight: 400;
 }
@@ -133,7 +133,7 @@
 .availability-contact p,
 .availability-contact span {
   margin: 0;
-  font-size: 9px;
+  font-size: 14px;
   line-height: 1.3;
   color: #111;
   font-weight: 400;
