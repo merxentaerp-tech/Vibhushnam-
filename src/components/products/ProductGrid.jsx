@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./ProductGrid.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { products } from "../../data/products";
-import viewProductMobIcon from "../../assets/icons/viewProductMob.png.png";
+import viewProductMobIcon from "../../assets/icons/mobile view Product box.png.png";
 
 const headingMap = {
   ring: "RINGS",
@@ -31,7 +31,6 @@ const ProductGrid = () => {
   const filteredProducts = categoryProducts.filter((item) => {
     const genderMatch = gender === "Gender" || item.gender === gender;
     const metalMatch = metal === "Metal" || item.metal === metal;
-
     return genderMatch && metalMatch;
   });
 
@@ -73,17 +72,19 @@ const ProductGrid = () => {
             <img className="product-img" src={item.image} alt={item.title} />
 
             <h3>{item.title}</h3>
-
             <p>{item.desc}</p>
 
             <button className="view-product-btn" onClick={handleViewProduct}>
               <span className="view-product-text">View Product</span>
 
-              <img
-                className="view-product-mobile"
-                src={viewProductMobIcon}
-                alt="View Product"
-              />
+              <span className="view-product-mobile-box">
+                <img
+                  className="view-product-mobile"
+                  src={viewProductMobIcon}
+                  alt=""
+                />
+                <span className="view-product-mobile-text">View Product</span>
+              </span>
             </button>
           </div>
         ))}
