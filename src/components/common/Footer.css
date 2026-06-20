@@ -167,19 +167,26 @@
 /* ================= MOBILE VIEW ONLY ================= */
 
 @media (max-width: 768px) {
+ @media (max-width: 768px) {
   .footer {
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .footer-inner {
+    padding: 36px 14px 18px;
+  }
+}
+
+  .footer-inner {
     width: 100%;
-    padding: 64px 14px 18px;
+    padding: 64px 14px 32px;
     display: flex;
     flex-wrap: wrap;
   }
 
   .footer-main {
     display: contents;
+    
   }
 
   .footer-about {
