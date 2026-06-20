@@ -32,8 +32,8 @@ const AboutIntro = () => {
     <section className="about-intro">
       <div className="about-top">
         <h2>
-          We’re a passionate team crafting unique jewellery inspired by
-          <span> family, delivering quality pieces just<br></br>for you</span>
+          We’re a passionate team crafting crafting unique jewellery inspired by
+          <span> family, delivering quality pieces just for you</span>
         </h2>
 
         <img src={topImage} alt="Jewellery" />
@@ -46,13 +46,9 @@ const AboutIntro = () => {
               <img src={item.icon} alt={item.title} />
             </div>
 
-            <div className="about-title">
-              {item.title}
-            </div>
+            <div className="about-title">{item.title}</div>
 
-            <div className="about-description">
-              {item.description}
-            </div>
+            <div className="about-description">{item.description}</div>
           </div>
         ))}
       </div>

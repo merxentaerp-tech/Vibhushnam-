@@ -4,22 +4,22 @@ import { Link } from "react-router-dom";
 
 import logo from "../../assets/images/logo.png";
 
-import allIcon from "../../assets/icons/All.svg";
-import banglesIcon from "../../assets/icons/Bangles.svg";
-import braceletIcon from "../../assets/icons/Braclet.svg";
-import necklessIcon from "../../assets/icons/Neckless.svg";
-import ringIcon from "../../assets/icons/Ring.svg";
+import nav1Icon from "../../assets/icons/nav1.png.png";
+import nav2Icon from "../../assets/icons/nav2.png.png";
+import nav3Icon from "../../assets/icons/nav3.png.png";
+import nav4Icon from "../../assets/icons/nav4.png.png";
+import nav5Icon from "../../assets/icons/nav5.png.png";
 
 import searchIcon from "../../assets/icons/MagnifyingGlass.svg";
 import micIcon from "../../assets/icons/Microphone.svg";
 import hamburgerIcon from "../../assets/icons/hamburgerIcon.png.png";
 
 const navItems = [
-  { id: 1, icon: allIcon, alt: "All", path: "/products" },
-  { id: 2, icon: braceletIcon, alt: "Bracelets", path: "/products/bracelet" },
-  { id: 3, icon: ringIcon, alt: "Rings", path: "/products/ring" },
-  { id: 4, icon: necklessIcon, alt: "Neckless", path: "/products/necklace" },
-  { id: 5, icon: banglesIcon, alt: "Bangles", path: "/products/bangle" },
+  { id: 1, icon: nav1Icon, text: "All", path: "/products" },
+  { id: 2, icon: nav2Icon, text: "Bracelets", path: "/products/bracelet" },
+  { id: 3, icon: nav3Icon, text: "Rings", path: "/products/ring" },
+  { id: 4, icon: nav4Icon, text: "Neckless", path: "/products/necklace" },
+  { id: 5, icon: nav5Icon, text: "Bangles", path: "/products/bangle" },
 ];
 
 const Header = () => {
@@ -56,12 +56,18 @@ const Header = () => {
         {navItems.map((item) => (
           <Link
             to={item.path}
-            className="nav-item"
+            className={`nav-item
+              ${item.id === 2 ? "bracelets-item" : ""}
+              ${item.id === 5 ? "bangles-item" : ""}`}
             key={item.id}
             onClick={() => setOpenMenu(false)}
           >
-            <img src={item.icon} alt={item.alt} />
-            <span>{item.alt}</span>
+            <img
+              src={item.icon}
+              alt={item.text}
+              className={`nav-icon nav-icon-${item.id}`}
+            />
+            <span>{item.text}</span>
           </Link>
         ))}
 
