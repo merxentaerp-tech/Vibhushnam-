@@ -156,7 +156,7 @@
   }
 
   .category-heading p {
-    max-width: 310px;
+    max-width: 410px;
     margin: 10px auto 0;
     font-size: clamp(14px, 4vw, 15px);
     line-height: 1.15;

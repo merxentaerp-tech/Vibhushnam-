@@ -205,7 +205,7 @@
 
   .popular-header p {
     margin: 14px auto 0;
-    max-width: min(315px, calc(100vw - 44px));
+    max-width: min(350px, calc(100vw - 44px));
     font-size: clamp(12px, 4.2vw, 18px);
     line-height: 1.35;
   }
@@ -298,7 +298,7 @@
   }
 
   .popular-header p {
-    max-width: 280px;
+    max-width: 370px;
     font-size: 16px;
     line-height: 1.4;
   }
@@ -310,7 +310,7 @@
   }
 
   .popular-header p {
-    max-width: 250px;
+    max-width: 370px;
     font-size: 16px;
   }
 }
@@ -321,7 +321,7 @@
   }
 
   .popular-header p {
-    max-width: 245px;
+    max-width: 370px;
     font-size: 16px;
   }
 
