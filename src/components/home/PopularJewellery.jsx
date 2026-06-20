@@ -61,7 +61,6 @@ const PopularJewellery = () => {
         </p>
       </div>
 
-      {/* WEB VIEW */}
       <div className="popular-products">
         <button className="slider-btn slider-left" onClick={handlePrev}>
           <img src={leftArrow} alt="Previous" />
@@ -89,7 +88,6 @@ const PopularJewellery = () => {
         </button>
       </div>
 
-      {/* MOBILE VIEW */}
       <div className="popular-mobile-slider">
         <button className="slider-btn slider-left" onClick={handlePrev}>
           <img src={leftArrow} alt="Previous" />
@@ -116,10 +114,7 @@ const PopularJewellery = () => {
       </div>
 
       <div className="view-all-wrapper">
-        <button
-          className="view-all-btn"
-          onClick={() => navigate("/products")}
-        >
+        <button className="view-all-btn" onClick={() => navigate("/products")}>
           View All
         </button>
       </div>
